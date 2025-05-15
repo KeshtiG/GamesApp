@@ -14,14 +14,15 @@
     <link rel="stylesheet" href="@Url.Content("~/css/style.css")" />
 </head>
 <body>
-    <main>
-        <h1>My Favorite Games</h1>
+    <header>
+        <img src="/Images/index-header.jpg" />
+        <h1 class="page-heading">My Favorite Games</h1>
+    </header>
 
+    <main>
         @foreach (var game in Model)
         {
-            <div class="game-container">
-                <h2><a asp-controller="games" asp-action="details" asp-route-id="@game.Id">@game.Name</a></h2>
-            </div>
+            <h2><a asp-controller="Games" asp-action="ViewGame" asp-route-id="@game.Id">@game.Name</a></h2>
         }
 
         <a asp-controller="Games" asp-action="AddGame" class="btn">Add a New Game</a>

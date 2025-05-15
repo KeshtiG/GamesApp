@@ -21,12 +21,14 @@ namespace GamesApp.Web.Controllers
         {
             if (!ModelState.IsValid)
             {
-                return View();
+                return View(game);
             }
 
             gameService.AddGame(game);
             return RedirectToAction(nameof(Index));
         }
 
+        [HttpGet("/ViewGame{id}")]
+        public IActionResult ViewGame(int id) => View(gameService.GetGameById(id));
     }
 }

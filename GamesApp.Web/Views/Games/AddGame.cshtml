@@ -33,6 +33,10 @@
             <input asp-for="Year" />
             <span asp-validation-for="Year"></span>
 
+            <label asp-for="ImageUrl"></label>
+            <input asp-for="ImageUrl" />
+            @* <span asp-validation-for="ImageUrl"></span> *@
+
             <label asp-for="Description"></label>
             <input asp-for="Description" />
             <span asp-validation-for="Description"></span>
@@ -40,9 +44,9 @@
             <input type="submit" style="width: 300px;" value="Add Game" />
         </form>
 
-        <div asp-validation-summary="All" class="form-validations-container"></div>
+        @* <div asp-validation-summary="All" class="form-validations-container"></div> *@
 
-        <a asp-controller="Games" asp-action="Index" class="btn">Back to Home</a>
+        <a asp-controller="Games" asp-action="Index" class="btn">Back to Game List</a>
 	</main>
 </body>
 </html>
