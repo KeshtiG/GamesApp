@@ -12,7 +12,7 @@ namespace GamesApp.Web.Services
                 Genre = "Third-person shooter",
                 Year = 2024,
                 Description = "Space Marine 2 is a third-person action shooter set in the grim Warhammer 40,000 universe. You play as an Ultramarine, a superhuman soldier, battling endless swarms of Tyranids in brutal melee and ranged combat. As a sequel to the 2011 cult hit Space Marine, the game delivers intense, cinematic battles and a dark, war-torn sci-fi atmosphere.",
-                ImageUrl = "/Images/friday-header.jpg"
+                ImageUrl = "/Images/sm2-header.jpg"
             },
             new Game {
                 Id = 2,
@@ -21,7 +21,7 @@ namespace GamesApp.Web.Services
                 Genre = "Third-person shooter",
                 Year = 2019,
                 Description = "World War Z is a fast-paced third-person shooter inspired by the movie of the same name. Players team up to fight massive swarms of zombies across various global locations. With intense co-op action, class-based characters, and strategic combat, it delivers chaotic fun against overwhelming odds.",
-                ImageUrl = "/Images/friday-header.jpg"
+                ImageUrl = "/Images/wwz-header.jpg"
             },
             new Game {
                 Id = 3,
@@ -30,7 +30,7 @@ namespace GamesApp.Web.Services
                 Genre = "Open-world RPG",
                 Year = 2023,
                 Description = "Hogwarts Legacy is an immersive, open-world action RPG set in the 1800s wizarding world. Players assume the role of a student at Hogwarts School of Witchcraft and Wizardry who holds the key to an ancient secret threatening to tear the wizarding world apart. Throughout the game, players can explore iconic and new locations, learn to cast spells, brew potions, tame magical beasts, and personalize their character to become the witch or wizard they aspire to be.",
-                ImageUrl = "/Images/friday-header.jpg"
+                ImageUrl = "/Images/hogwarts-header.jpg"
             },
             new Game {
                 Id = 4,
@@ -39,16 +39,16 @@ namespace GamesApp.Web.Services
                 Genre = "Open-world action-adventure",
                 Year = 2018,
                 Description = "Red Dead Redemption 2 is an open-world action-adventure game set in 1899, following Arthur Morgan, a member of the Van der Linde gang, as he navigates the decline of the Wild West. Players engage in a richly detailed world, experiencing a deep narrative, dynamic weather, wildlife, and immersive gameplay. The game offers both single-player and multiplayer modes, with the latter known as Red Dead Online.",
-                ImageUrl = "/Images/friday-header.jpg"
+                ImageUrl = "/Images/rdr2-header.jpg"
             },
             new Game {
                 Id = 5,
-                Name = "Hobo: Tough Life",
-                Developer = "Perun Creative",
-                Genre = "Urban survival RPG",
-                Year = 2021,
-                Description = "Hobo: Tough Life is an urban survival role-playing game where you play as a homeless person navigating the cold, post-Communist city of Praslav. Scavenge for food, find shelter, and interact with a variety of NPCs while dealing with the challenges of homelessness. The game features a rich narrative, crafting, base-building, and online co-op multiplayer.",
-                ImageUrl = "/Images/friday-header.jpg"
+                Name = "The Forest",
+                Developer = "Endnight Games",
+                Genre = "Survival horror",
+                Year = 2018,
+                Description = "The Forest is a first-person survival horror game where you play as the lone survivor of a plane crash, stranded in a mysterious forest. To survive, you must build shelter, scavenge for resources, and fend off a tribe of cannibalistic mutants. With its eerie atmosphere, crafting system, and open-ended gameplay, The Forest offers a tense and immersive survival experience, especially when played in co-op mode.",
+                ImageUrl = "/Images/forest-header.jpg"
             },
             new Game {
                 Id = 6,

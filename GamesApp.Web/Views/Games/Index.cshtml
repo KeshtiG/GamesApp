@@ -19,11 +19,16 @@
         <h1 class="page-heading">My Favorite Games</h1>
     </header>
 
-    <main>
-        @foreach (var game in Model)
-        {
-            <h2><a asp-controller="Games" asp-action="ViewGame" asp-route-id="@game.Id">@game.Name</a></h2>
-        }
+    <main class="main-index">
+        <div class="game-cards-container">
+            @foreach (var game in Model)
+            {
+                <a asp-controller="Games" asp-action="ViewGame" asp-route-id="@game.Id" class="game-card">
+                    <img src="@game.ImageUrl" alt="@game.Name" />
+                    <h2>@game.Name</h2>
+                </a>
+            }
+        </div>
 
         <a asp-controller="Games" asp-action="AddGame" class="btn">Add a New Game</a>
     </main>
