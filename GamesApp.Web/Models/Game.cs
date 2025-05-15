@@ -8,6 +8,10 @@ public class Game
 
     [Required(ErrorMessage = "You need to enter a game name.")]
     public string? Name { get; set; }
+    
+    
+    [Required(ErrorMessage = "You need to enter a game name.")]
+    public string? Developer { get; set; }
 
 
     [Required(ErrorMessage = "You need to enter a game description.")]
