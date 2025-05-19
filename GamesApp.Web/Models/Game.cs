@@ -10,7 +10,7 @@ public class Game
     public string? Name { get; set; }
     
     
-    [Required(ErrorMessage = "You need to enter a game name.")]
+    [Required(ErrorMessage = "You need to enter a game developer.")]
     public string? Developer { get; set; }
 
 
