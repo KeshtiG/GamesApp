@@ -6,6 +6,8 @@
 	ViewBag.MainClass = "main-add";
 }
 
+<partial name="_GameInfoHeader" />
+
 <form asp-controller="Games" asp-action="AddGame" class="add-game-form">
 	<div class="add-game-fields-container">
 		<div class="add-game-field">
@@ -45,3 +47,8 @@
 
 	<button type="submit" value="Add Game" class="btn">Add Game</button>
 </form>
+
+@section scripts {
+	<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.19.2/jquery.validate.min.js"></script>
+	<script src="https://ajax.aspnetcdn.com/ajax/mvc/5.2.3/jquery.validate.unobtrusive.min.js"></script>
+}
