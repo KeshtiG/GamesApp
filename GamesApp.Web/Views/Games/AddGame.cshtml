@@ -1,67 +1,49 @@
 ﻿@model GamesApp.Web.Models.Game
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Game App - Add Game</title>
+@{
+	ViewBag.Title = "Add a New Game";
+	ViewBag.ImageSrc = "/Images/index-header.jpg";
+	ViewBag.MainClass = "main-add";
+	Layout = "_Layout";
+}
 
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap" rel="stylesheet">
+<form asp-controller="Games" asp-action="AddGame" class="add-game-form">
+	<div class="add-game-fields-container">
+		<div class="add-game-field">
+			<label asp-for="Name"></label>
+			<input asp-for="Name" />
+			<span asp-validation-for="Name"></span>
+		</div>
+		<div class="add-game-field">
+			<label asp-for="Developer"></label>
+			<input asp-for="Developer" />
+			<span asp-validation-for="Developer"></span>
+		</div>
+	</div>
 
-	@* Custom CSS *@
-	<link rel="stylesheet" href="@Url.Content("~/css/style.css")" />
-</head>
-<body>
-	<header>
-		<img src="/Images/index-header.jpg" />
-		<h1 class="page-heading">Add a New Game</h1>
-	</header>
-	<main>
-		<form asp-controller="Games" asp-action="AddGame" class="add-game-form">
-			<div class="add-game-fields-container">
-				<div class="add-game-field">
-					<label asp-for="Name"></label>
-					<input asp-for="Name" />
-					<span asp-validation-for="Name"></span>
-				</div>
-				<div class="add-game-field">
-					<label asp-for="Developer"></label>
-					<input asp-for="Developer" />
-					<span asp-validation-for="Developer"></span>
-				</div>
-			</div>
+	<div class="add-game-fields-container">
+		<div class="add-game-field">
+			<label asp-for="Genre"></label>
+			<input asp-for="Genre" />
+			<span asp-validation-for="Genre"></span>
+		</div>
 
-			<div class="add-game-fields-container">
-				<div class="add-game-field">
-					<label asp-for="Genre"></label>
-					<input asp-for="Genre" />
-					<span asp-validation-for="Genre"></span>
-				</div>
+		<div class="add-game-field">
+			<label asp-for="Year"></label>
+			<input asp-for="Year" />
+			<span asp-validation-for="Year"></span>
+		</div>
 
-				<div class="add-game-field">
-					<label asp-for="Year"></label>
-					<input asp-for="Year" />
-					<span asp-validation-for="Year"></span>
-				</div>
+		<div class="add-game-field">
+			<label asp-for="ImageUrl"></label>
+			<input asp-for="ImageUrl" placeholder="Ex: www.example.com/image.jpg" />
+		</div>
+	</div>
 
-				<div class="add-game-field">
-					<label asp-for="ImageUrl"></label>
-					<input asp-for="ImageUrl" placeholder="Ex: www.example.com/image.jpg" />
-				</div>
-			</div>
+	<label asp-for="Description"></label>
+	<textarea asp-for="Description" rows="5" cols="40"></textarea>
+	<span asp-validation-for="Description"></span>
 
-			<label asp-for="Description"></label>
-			<textarea asp-for="Description" rows="5" cols="40"></textarea>
-			<span asp-validation-for="Description"></span>
-
-			<button type="submit" value="Add Game" class="btn">Add Game</button>
-		</form>
-
-		@* <div asp-validation-summary="All" class="form-validations-container"></div> *@
-
-		@* <a asp-controller="Games" asp-action="Index" class="btn">Back to Game List</a> *@
-	</main>
-</body>
-</html>
+	<button type="submit" value="Add Game" class="btn">Add Game</button>
+</form>

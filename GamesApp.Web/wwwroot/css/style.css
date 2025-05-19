@@ -3,8 +3,14 @@
     font-family: "Alexandria", sans-serif;
 }
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
 p {
     color: #918fb5;
+    line-height: 1.6;
 }
 
 a {
@@ -39,7 +45,7 @@ button.btn {
     color: #fff;
 }
 
-body > main {
+main {
     max-width: 1200px;
     margin: 0 auto;
     padding: 4% 4% 10%;
