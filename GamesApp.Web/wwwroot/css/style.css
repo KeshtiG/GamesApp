@@ -1,11 +1,12 @@
-﻿body {
-    background-color: #04050c;
-    font-family: "Alexandria", sans-serif;
-}
-
+﻿/********* BASE & TYPOGRAPHY *********/
 * {
     box-sizing: border-box;
     margin: 0;
+}
+
+body {
+    background-color: #04050c;
+    font-family: "Alexandria", sans-serif;
 }
 
 p {
@@ -26,25 +27,36 @@ a:hover {
 
 main h2, h3 {
     color: #fff;
+    margin-bottom: 0.5rem;
 }
 
+
+/********* BUTTONS *********/
 .btn {
     background-color: #2468cb;
     color: #fff;
     font-size: 1.8rem;
     margin-top: 3rem;
+    padding: 1rem 1.5rem;
+    border-radius: 16px;
 }
 
 button.btn {
     width: 300px;
     margin: 0 auto;
+    padding: 1rem 1.5rem;
+    border-radius: 16px;
+    border: 0;
 }
 
 .btn:hover {
     background-color: #0a3a81;
     color: #fff;
+    cursor: pointer;
 }
 
+
+/********* MAIN *********/
 main {
     max-width: 1200px;
     margin: 0 auto;
@@ -59,6 +71,16 @@ main {
     align-items: center;
 }
 
+
+/********* HEADER *********/
+header {
+    height: 400px;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    box-shadow: 0px 0px 27px 0px rgb(0 0 0 / 24%);
+}
+
 header img {
     max-width: 1200px;
     width: 100%;
@@ -66,14 +88,6 @@ header img {
     object-fit: cover;
     object-position: center;
     opacity: 0.6;
-}
-
-header {
-    height: 400px;
-    max-width: 1200px;
-    margin: 0 auto;
-    position: relative;
-    box-shadow: 0px 0px 27px 0px rgb(0 0 0 / 24%);
 }
 
 header h1 {
@@ -88,6 +102,8 @@ header h1 {
     text-shadow: 0 0 12px rgb(4 4 12);
 }
 
+
+/********* LANDING PAGE *********/
 .game-cards-container {
     display: flex;
     flex-wrap: wrap;
@@ -122,6 +138,16 @@ header h1 {
     font-size: 1.4rem;
 }
 
+
+/********* VIEW GAME PAGE *********/
+.game-info-container {
+    display: flex;
+    gap: 8rem;
+    margin-bottom: 2rem;
+}
+
+
+/********* GAME INFO HEADER *********/
 .game-info-header {
     display: flex;
     flex-direction: row;
@@ -136,12 +162,8 @@ header h1 {
     text-transform: uppercase;
 }
 
-.game-info-container {
-    display: flex;
-    gap: 8rem;
-    margin-bottom: 2rem;
-}
 
+/********* ADD GAME FORM *********/
 .add-game-form {
     display: flex;
     flex-direction: column;
@@ -178,4 +200,8 @@ header h1 {
 
 .form-validations-container {
     background-color: red;
+}
+
+.field-validation-error {
+    color: #df6d6d;
 }
