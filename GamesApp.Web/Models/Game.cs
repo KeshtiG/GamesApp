@@ -25,6 +25,6 @@ public class Game
     [Required(ErrorMessage = "You need to enter a release year.")]
     public int Year { get; set; }
 
-    [Display(Name = "Image URL (ex: www.example.com/image.jpg)")]
+    [Display(Name = "Image URL")]
     public string? ImageUrl { get; set; }
 }
