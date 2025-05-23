@@ -35,15 +35,18 @@
 			<span asp-validation-for="Year"></span>
 		</div>
 
-		<div class="add-game-field">
-			<label asp-for="ImageUrl"></label>
-			<input asp-for="ImageUrl" placeholder="Ex: www.example.com/image.jpg" />
-		</div>
 	</div>
 
-	<label asp-for="Description"></label>
-	<textarea asp-for="Description" rows="5" cols="40"></textarea>
-	<span asp-validation-for="Description"></span>
+	<div class="add-game-field">
+		<label asp-for="ImageUrl"></label>
+		<input asp-for="ImageUrl" placeholder="Ex: www.example.com/image.jpg" />
+	</div>
+
+	<div class="add-game-field">
+		<label asp-for="Description"></label>
+		<textarea asp-for="Description" rows="5" cols="40"></textarea>
+		<span asp-validation-for="Description"></span>
+	</div>
 
 	<button type="submit" value="Add Game" class="btn">Add Game</button>
 </form>

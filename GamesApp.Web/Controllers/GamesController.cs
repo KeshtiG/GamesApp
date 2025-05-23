@@ -4,10 +4,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace GamesApp.Web.Controllers
 {
-    public class GamesController : Controller
+    // Using a primary constructor that injects the GameService instance
+    public class GamesController(GameService gameService) : Controller
     {
-        static GameService gameService = new GameService();
-
         [HttpGet("")]
         public IActionResult Index() => View(gameService.GetAllGames());
 
@@ -21,10 +20,13 @@ namespace GamesApp.Web.Controllers
         {
             if (!ModelState.IsValid)
             {
-                return View(game);
+                return View();
             }
 
+            // Add the game to the list of games if Model State is valid
             gameService.AddGame(game);
+
+            // Redirect to Index after the game is added
             return RedirectToAction(nameof(Index));
         }
 
