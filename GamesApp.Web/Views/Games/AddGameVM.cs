@@ -1,5 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
+namespace GamesApp.Web.Views.Games;
+
 public class AddGameVM
 {
     [Required(ErrorMessage = "You need to enter a game name.")]

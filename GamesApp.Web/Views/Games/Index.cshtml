@@ -1,4 +1,4 @@
-﻿@model Game[]
+﻿@model IndexVM
 
 @{
     ViewBag.Title = "My Favorite Games";
@@ -7,7 +7,7 @@
 }
 
 <div class="game-cards-container">
-    @foreach (var game in Model)
+    @foreach (var game in Model.GameItems)
     {
         <a asp-controller="Games" asp-action="ViewGame" asp-route-id="@game.Id" class="game-card">
             <img src="@game.ImageUrl" alt="@game.Name" />
